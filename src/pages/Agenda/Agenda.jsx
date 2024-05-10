@@ -9,7 +9,6 @@ import {
 } from "./AgendaStyles";
 import { ArrowForwardIosRounded } from "@mui/icons-material";
 import { Link } from "react-router-dom";
-
 const pages = [
 	{ name: "Company overview" },
 	{ name: "Who We Are" },
@@ -19,6 +18,8 @@ const pages = [
 ];
 
 function Agenda() {
+
+
 	return (
 		<div style={{ overflow: "hidden" }}>
 			<Slide
@@ -29,7 +30,7 @@ function Agenda() {
 				<ContainerFull>
 					<AgendaImage
 						component={"img"}
-						src="public\assets\Images\Agenda\Agenda-bg.jpg"
+						src=".\\assets\Images\Agenda\Agenda-bg.jpg"
 					/>
 					<RightBox>
 						<GridContainer container>
