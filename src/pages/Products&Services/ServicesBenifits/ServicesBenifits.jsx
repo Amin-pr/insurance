@@ -46,7 +46,7 @@ function ServicesBenifits({ showing = 1 }) {
 		setSlideNumber(e.target.value);
 		console.log(e.target.value);
 	}
-	console.log(slideNumber == 3);
+
 	return (
 		<Slide
 			in={showing === "benifits"}

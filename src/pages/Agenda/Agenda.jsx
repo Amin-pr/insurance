@@ -15,10 +15,9 @@ const pages = [
 	{ name: "Who We Are" },
 	{ name: "Our Uniqe Values" },
 	{ name: "Products & Services" },
-	{ name: "Customer Reviews" },
-	{ name: "Pricing & Discounts" },
-	{ name: "Cost Comparition" },
-	{ name: "Summery Of Offering" },
+	{ name: "Login & Sign up" },
+	
+	
 ];
 
 function Agenda() {

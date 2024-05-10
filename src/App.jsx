@@ -17,6 +17,11 @@ import {
 	createBrowserRouter,
 	createRoutesFromElements,
 } from "react-router-dom";
+import Login from "./pages/Login/LoginPage";
+import { ToastContainer } from "react-toastify";
+import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
+import { ReactQueryDevtools } from "@tanstack/react-query-devtools";
+import UserProfile from "./pages/UserProfile/UserProfile";
 function App() {
 	const router = createBrowserRouter(
 		createRoutesFromElements(
@@ -51,10 +56,22 @@ function App() {
 						path="Products & Services"
 						element={<Products />}
 					/>
+					<Route
+						path="Login & Sign Up"
+						element={<Login />}
+					></Route>
+					<Route
+						path="user"
+						element={<UserProfile />}
+					></Route>
 				</Route>
 			</Route>
 		)
 	);
+
+	const queryClient = new QueryClient({
+		defaultOptions: { queries: { staleTime: 60 * 1000 } },
+	});
 
 	return (
 		<Box
@@ -63,7 +80,10 @@ function App() {
 			width={"100vw"}
 			height={"100vh"}
 		>
-			<RouterProvider router={router} />
+			<QueryClientProvider client={queryClient}>
+				<ReactQueryDevtools />
+				<RouterProvider router={router} />
+			</QueryClientProvider>
 		</Box>
 	);
 }

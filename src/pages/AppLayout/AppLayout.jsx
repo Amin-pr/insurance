@@ -3,29 +3,35 @@ import NavBar from "../../ui/NavBar";
 import { BackgroundImage, Container, ContentsHolder } from "./AppLayoutStyles";
 import ButtonHolder from "../../ui/ButtonHolder";
 import useHover from "../../utility/HoverFunction/HoverFunction";
-import { Link, Outlet, useLocation } from "react-router-dom";
+import { Outlet, useLocation } from "react-router-dom";
+import { useQuery } from "@tanstack/react-query";
+import { GetLoggedUserInfo } from "../../utility/Auth/GetLoggedUserInfo";
 
 // eslint-disable-next-line react/prop-types
 function AppLayout() {
+	const { data: userData } = useQuery({
+		queryKey: ["user"],
+		// must return a promise
+		queryFn: () => GetLoggedUserInfo(),
+		staleTime: 60 * 1000 * 3,
+	});
+
 	const pages = [
 		{ name: "Companyoverview" },
 		{ name: "WhoWeAre" },
 		{ name: "OurUniqeValues" },
 		{ name: "Products&Services" },
-		{ name: "CustomerReviews" },
-		{ name: "Pricing&Discounts" },
-		{ name: "CostComparition" },
-		{ name: "SummeryOfOffering" },
+		{ name: "Login & Sign up" },
 	];
 	const pages1 = [
 		{ name: "Company overview" },
 		{ name: "Who We Are" },
 		{ name: "Our Uniqe Values" },
 		{ name: "Products & Services" },
-		{ name: "Customer Reviews" },
-		{ name: "Pricing & Discounts" },
-		{ name: "Cost Comparition" },
-		{ name: "Summery Of Offering" },
+		{ name: "Login & Sign up" },
+		// { name: "Pricing & Discounts" },
+		// { name: "Cost Comparition" },
+		// { name: "Summery Of Offering" },
 	];
 	let location = useLocation();
 	// console.log(location.pathname);
@@ -53,15 +59,15 @@ function AppLayout() {
 			<Container>
 				<ButtonHolder
 					prev
-					text={pageIndex === 0 ? "Home" : pages1.at(pageIndex - 1).name}
-					to={`/${pageIndex === 0 ? "Home" : pages1.at(pageIndex - 1).name}`}
+					text={pages1.at(pageIndex - 1).name}
+					to={`/${pages1.at(pageIndex - 1).name}`}
 				></ButtonHolder>
 				<ContentsHolder>
 					<Outlet />
 				</ContentsHolder>
 				<ButtonHolder
 					next
-					text={pageIndex === 0 ? "Home" : pages1.at(pageIndex + 1).name}
+					text={ pages1.at(pageIndex + 1).name}
 					buttonBorderColor="#FFFFFF"
 					to={`/${pages1.at(pageIndex + 1).name}`}
 				></ButtonHolder>
