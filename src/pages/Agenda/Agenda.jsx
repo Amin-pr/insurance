@@ -16,8 +16,6 @@ const pages = [
 	{ name: "Our Uniqe Values" },
 	{ name: "Products & Services" },
 	{ name: "Login & Sign up" },
-	
-	
 ];
 
 function Agenda() {
@@ -31,7 +29,7 @@ function Agenda() {
 				<ContainerFull>
 					<AgendaImage
 						component={"img"}
-						src="src/assets/images/Agenda/Agenda-bg.jpg"
+						src="public\assets\Images\Agenda\Agenda-bg.jpg"
 					/>
 					<RightBox>
 						<GridContainer container>

@@ -24,21 +24,21 @@ function ServicesBenifits({ showing = 1 }) {
 			name: "Comprehensive Medical Coverage",
 			description:
 				"Health insurance provides employees with access to a wide range of medical services, including preventive care, doctor visits, hospitalization, prescription medications, and specialist consultations. ",
-			iconSrc: "src/assets/images/ProductAndServices/Benifits-Icon-1.svg",
+			iconSrc: "public/assets/images/ProductAndServices/Benifits-Icon-1.svg",
 		},
 		{
 			num: 2,
 			name: "Financial Protection",
 			description:
 				"Health insurance helps protect employees from high medical costs. It provides coverage for major medical procedures, surgeries, and treatments, reducing the financial burden on employees and their families.",
-			iconSrc: "src/assets/images/ProductAndServices/Benifits-Icon-2.svg",
+			iconSrc: "public/assets/images/ProductAndServices/Benifits-Icon-2.svg",
 		},
 		{
 			num: 3,
 			name: "Employee Assistance Programs (EAPs)",
 			description:
 				"Some health insurance plans offer EAPs, which provide confidential counseling and support services to employees and their families for a wide range of personal and work-related challenges. EAPs can address stress, mental health concerns, financial issues, and more, helping employees navigate difficult situations and maintain their well-being.",
-			iconSrc: "src/assets/images/ProductAndServices/Benifits-Icon-3.svg",
+			iconSrc: "public/assets/images/ProductAndServices/Benifits-Icon-3.svg",
 		},
 	];
 
@@ -56,7 +56,7 @@ function ServicesBenifits({ showing = 1 }) {
 			<ChildrenHolder>
 				<Box
 					component={"img"}
-					src="src/assets/images/ProductAndServices/benifits.jpg"
+					src="public/assets/images/ProductAndServices/benifits.jpg"
 					sx={{ width: "100%" }}
 				/>
 				<TextBox>

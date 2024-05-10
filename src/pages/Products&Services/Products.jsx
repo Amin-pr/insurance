@@ -67,7 +67,7 @@ function Products() {
 							<RightBoxImageFilter />
 							<RightBoxImage
 								component={"img"}
-								image="src/assets/images/ProductAndServices/family.png"
+								image="public/assets/images/ProductAndServices/family.png"
 							/>
 						</RightBoxImageHolder>
 					</Slide>

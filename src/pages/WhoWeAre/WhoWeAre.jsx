@@ -74,7 +74,7 @@ function WhoWeAre() {
 						>
 							<Image
 								component={"img"}
-								src="src/assets/images/AppLayout/AppLayoutImage.png"
+								src="public/assets/images/AppLayout/AppLayoutImage.png"
 							/>
 						</Slide>
 						<Box

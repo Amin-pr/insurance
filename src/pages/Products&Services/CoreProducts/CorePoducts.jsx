@@ -33,7 +33,7 @@ function CorePoducts({ showing }) {
 						<ChildeBox>
 							<Box
 								component={"img"}
-								src="src/assets/images/ProductAndServices/frame 268.svg"
+								src="public/assets/images/ProductAndServices/frame 268.svg"
 								width={"60px"}
 								height={"60px"}
 							/>
@@ -58,7 +58,7 @@ function CorePoducts({ showing }) {
 						<ChildeBox>
 							<Box
 								component={"img"}
-								src="src/assets/images/ProductAndServices/frame 269.svg"
+								src="public/assets/images/ProductAndServices/frame 269.svg"
 								width={"60px"}
 								height={"60px"}
 							/>

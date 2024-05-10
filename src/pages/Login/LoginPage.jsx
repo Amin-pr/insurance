@@ -39,7 +39,10 @@ function LoginPage() {
 						</Text>
 					</TextHolder>
 					<TypeHolder>
-						<ButtonHolder value={formType} fullWidth>
+						<ButtonHolder
+							value={formType}
+							fullWidth
+						>
 							<ToggleButton
 								value={"login"}
 								onClick={() => setFormType("login")}
@@ -80,7 +83,7 @@ function LoginPage() {
 						<RightBoxImageHolder>
 							<RightBoxImage
 								component={"img"}
-								image="src/assets/images/Login/1.jpg"
+								image="public/assets/images/Login/1.jpg"
 							/>
 						</RightBoxImageHolder>
 					</Slide>

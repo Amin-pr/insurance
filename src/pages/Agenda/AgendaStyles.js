@@ -9,7 +9,7 @@ const ContainerFull = styled(Box)({
 });
 
 const AgendaImage = styled(Box)({
-	backgroundImage: "src/assets/images/Agenda-bg.jpg",
+	backgroundImage: "public/assets/images/Agenda-bg.jpg",
 	maxWidth: "calc(100vw )",
 	height: "calc(100vh)",
 	// aspectRatio: "16/8",

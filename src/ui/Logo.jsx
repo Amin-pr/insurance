@@ -11,7 +11,7 @@ function Logo({ width = "250", maxWidth, minWidth }) {
 		<Box>
 			<IconImage
 				component={"img"}
-				src="src/assets/logo/logo.png"
+				src="public/assets/logo/logo.png"
 				alt="company-logo"
 			/>
 		</Box>

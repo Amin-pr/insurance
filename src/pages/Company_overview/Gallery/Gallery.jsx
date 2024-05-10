@@ -5,9 +5,9 @@ import { ArrowBackIosNew, ArrowForwardIos } from "@mui/icons-material";
 
 function Gallery({ scrollAmount }) {
 	var items = [
-		{ src: "src/assets/images/CompanyOverview/1.png" },
-		{ src: "src/assets/images/CompanyOverview/2.png" },
-		{ src: "src/assets/images/CompanyOverview/3.png" },
+		{ src: "public/assets/images/CompanyOverview/1.png" },
+		{ src: "public/assets/images/CompanyOverview/2.png" },
+		{ src: "public/assets/images/CompanyOverview/3.png" },
 	];
 
 	return (
