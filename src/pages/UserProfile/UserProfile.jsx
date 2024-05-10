@@ -1,6 +1,5 @@
 import { Box, Typography } from "@mui/material";
 import { QueryClient, useQueryClient } from "@tanstack/react-query";
-import { useEffect } from "react";
 
 function UserProfile() {
     
