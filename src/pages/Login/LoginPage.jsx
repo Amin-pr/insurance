@@ -85,7 +85,7 @@ function LoginPage() {
 						<RightBoxImageHolder>
 							<RightBoxImage
 								component={"img"}
-								image="public/assets/images/Login/1.jpg"
+								image=".\\assets\Images\Login\1.jpg"
 							/>
 						</RightBoxImageHolder>
 					</Slide>

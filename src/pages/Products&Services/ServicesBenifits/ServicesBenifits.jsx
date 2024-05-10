@@ -56,7 +56,7 @@ function ServicesBenifits({ showing = 1 }) {
 			<ChildrenHolder>
 				<Box
 					component={"img"}
-					src="public/assets/images/ProductAndServices/benifits.jpg"
+					src=".\\assets\Images\ProductAndServices\benifits.jpg"
 					sx={{ width: "100%" }}
 				/>
 				<TextBox>
