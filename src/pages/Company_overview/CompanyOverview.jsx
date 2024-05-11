@@ -1,5 +1,5 @@
 import { useRef } from "react";
-import { Box, Grid, Grow } from "@mui/material";
+import { Box, Grid, Grow, Paper } from "@mui/material";
 import { CompanyText, GridItem, Holder } from "./CompanyOverviewStyles";
 import StoryBehind from "./StoryBehind/StoryBehind";
 import StartingText from "./StartingText/StartingText";
@@ -35,7 +35,9 @@ function CompanyOverView() {
 						alignItems="center"
 						justifyContent={"center"}
 					>
-						<CompanyText>Company Overview</CompanyText>
+						<Box color="dark1" sx={{bgcolor:"dark1"}}>
+							<CompanyText>Company Overview</CompanyText>
+						</Box>
 					</GridItem>
 					<GridItem
 						item

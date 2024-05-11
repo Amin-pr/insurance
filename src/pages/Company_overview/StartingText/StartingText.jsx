@@ -1,4 +1,5 @@
-import { Slide, Typography } from "@mui/material";
+import { Paper, Slide, Typography } from "@mui/material";
+import { TextHolder } from "./StartingTextStyles";
 // eslint-disable-next-line react/prop-types
 function StartingText({ scrollAmount }) {
 	return (
@@ -6,15 +7,17 @@ function StartingText({ scrollAmount }) {
 			in={scrollAmount === 0}
 			direction="down"
 		>
-			<Typography
-				variant="body1"
-				fontSize={"2rem"}
-				textAlign={"left"}
-				margin={"3rem 3rem 0 3rem"}
-			>
-				We understand the importance of ensuring the well-being of employees and
-				their families by offering affordable and accessible healthcare
-			</Typography>
+			<TextHolder sx={{}}>
+				<Typography
+					variant="body1"
+					fontSize={"2rem"}
+					textAlign={"left"}
+					margin={"3rem 3rem 0 3rem"}
+				>
+					We understand the importance of ensuring the well-being of employees
+					and their families by offering affordable and accessible healthcare
+				</Typography>
+			</TextHolder>
 		</Slide>
 	);
 }

@@ -1,10 +1,9 @@
-import styled from "@emotion/styled";
-import { Box } from "@mui/material";
+import { Paper, styled } from "@mui/material";
 
-const Holder = styled(Box)(({ theme }) => {
+const TextHolder = styled(Paper)(({ theme }) => {
 	return {
 		padding: "2rem ",
-		margin: "1.5rem",
+		margin: "2rem",
 		backgroundColor: theme.palette.light.main,
 		// height: "60%",
 		display: "flex",
@@ -14,4 +13,4 @@ const Holder = styled(Box)(({ theme }) => {
 	};
 });
 
-export { Holder };
+export { TextHolder };
