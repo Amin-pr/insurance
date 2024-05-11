@@ -28,7 +28,7 @@ const RightBox = styled(Box)({
 	
 	backgroundSize: "cover",
 	width: "45%",
-	backgroundImage: `url(public/assets/Images/GettingStarted/1.png)`,
+	backgroundImage: `url(.//assets/Images/GettingStarted/1.png)`,
 	backgroundRepeat: "no-repeat",
 	right: "0",
 	top: "0",
