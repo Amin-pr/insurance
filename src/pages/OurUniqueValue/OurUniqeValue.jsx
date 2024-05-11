@@ -51,7 +51,7 @@ function OurUniqeValue() {
 	// selects the chosen obj
 	const selected =
 		textes[
-			Object.keys(textes).find((item) => textes[item].alignment === alignment)
+			Object?.keys(textes)?.find((item) => textes[item]?.alignment === alignment)
 		];
 	return (
 		<Grow
@@ -112,7 +112,7 @@ function OurUniqeValue() {
 										color="dark1.main"
 										letterSpacing={"-2px"}
 									>
-										{selected.title}
+										{selected?.title}
 									</Typography>
 
 									<Typography
@@ -120,7 +120,7 @@ function OurUniqeValue() {
 										color="dark1.main"
 										fontWeight={"medium"}
 									>
-										{selected.text}
+										{selected?.text}
 									</Typography>
 								</Box>
 							</Fade>
