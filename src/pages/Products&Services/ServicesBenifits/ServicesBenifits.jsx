@@ -1,6 +1,5 @@
-import { Box, Grow, Slide, ToggleButton, Typography } from "@mui/material";
+import { Box, Grow, Slide, Typography } from "@mui/material";
 import {
-	HeadImage,
 	ChildrenHolder,
 	TextBox,
 	Benifit,
