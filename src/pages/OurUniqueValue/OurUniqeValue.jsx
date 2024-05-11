@@ -84,7 +84,7 @@ function OurUniqeValue() {
 									objectFit: "cover",
 								}}
 								onClick={(e) => e.play}
-								image="public\assets\Images\CompanyOverview\3.png"
+								image=".\\assets\Images\CompanyOverview\3.png"
 								component={"img"}
 								// autoPlay
 							></CardMedia>
