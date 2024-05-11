@@ -25,11 +25,14 @@ const LeftBox = styled(Box)({
 
 const RightBox = styled(Box)({
 	position: "absolute",
-	width: "65%",
-	background: "red",
+	
+	backgroundSize: "cover",
+	width: "45%",
+	backgroundImage: `url(public/assets/Images/GettingStarted/1.png)`,
+	backgroundRepeat: "no-repeat",
 	right: "0",
 	top: "0",
-	height: "calc(100vh )",
+	height: "100%",
 });
 
 const DateText = styled(Typography)({
