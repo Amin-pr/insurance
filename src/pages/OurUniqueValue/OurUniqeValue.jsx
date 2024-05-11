@@ -77,12 +77,15 @@ function OurUniqeValue() {
 							<br />
 							{} Value
 						</Typography>
-						<Card>
+						<Card sx={{ height: "100%" }}>
 							<CardMedia
-								sx={{ filter: "blur(2px)" }}
+								sx={{
+									height: "100%",
+									objectFit: "cover",
+								}}
 								onClick={(e) => e.play}
-								// image="src/assets/video/video.mp4"
-								component={"video"}
+								image="public\assets\Images\CompanyOverview\3.png"
+								component={"img"}
 								// autoPlay
 							></CardMedia>
 						</Card>
