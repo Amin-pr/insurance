@@ -17,4 +17,9 @@ export const theme = createTheme({
 		white: { main: "#ffffff" },
 		medium: { main: "#8DACAE" },
 	},
+	breakpoints: {
+		values: {
+			md: 870,
+		},
+	},
 });

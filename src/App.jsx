@@ -2,11 +2,8 @@
 import { Box } from "@mui/material";
 import Agenda from "./pages/Agenda/Agenda";
 import AppLayout from "./pages/AppLayout/AppLayout";
-// import CompanyOverView from "./pages/Company_overview/CompanyOverview";
 import GettStarted from "./pages/GettStarted/GettStarted";
-import NavBar from "./ui/NavBar";
 import CompanyOverView from "./pages/Company_overview/CompanyOverview";
-import Gallery from "./pages/Company_overview/Gallery/Gallery";
 import WhoWeAre from "./pages/WhoWeAre/WhoWeAre";
 import WhoWeAre2 from "./pages/WhoWeAre/WhoWeAre2/WhoWeAre2";
 import OurUniqeValue from "./pages/OurUniqueValue/OurUniqeValue";
@@ -18,11 +15,15 @@ import {
 	createRoutesFromElements,
 } from "react-router-dom";
 import Login from "./pages/Login/LoginPage";
-import { ToastContainer } from "react-toastify";
 import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
 import { ReactQueryDevtools } from "@tanstack/react-query-devtools";
 import UserProfile from "./pages/UserProfile/UserProfile";
+import DeviceType from "./utility/Device Type/Device Type";
+
 function App() {
+	//device width
+	const device = DeviceType();
+
 	const router = createBrowserRouter(
 		createRoutesFromElements(
 			<Route>
@@ -75,10 +76,11 @@ function App() {
 
 	return (
 		<Box
+			boxSizing={"border-box"}
 			padding={0}
 			margin={0}
-			width={"100vw"}
-			height={"100vh"}
+			width={"100dvw"}
+			height={"100dvh"}
 		>
 			<QueryClientProvider client={queryClient}>
 				<ReactQueryDevtools />

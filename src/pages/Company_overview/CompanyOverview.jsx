@@ -27,6 +27,7 @@ function CompanyOverView() {
 					alignContent={"center"}
 					justifyContent={"space-between"}
 					height={"100%"}
+					bgcolor={'red'}
 				>
 					<GridItem
 						item
@@ -34,15 +35,18 @@ function CompanyOverView() {
 						overflow={"hidden"}
 						alignItems="center"
 						justifyContent={"center"}
+						bgcolor={'yellow'}
 					>
-						<Box color="dark1" sx={{bgcolor:"dark1"}}>
+						<Box
+							color="dark1"
+							sx={{ bgcolor: "dark1" }}
+						>
 							<CompanyText>Company Overview</CompanyText>
 						</Box>
 					</GridItem>
 					<GridItem
 						item
-						xs={scrollAmount === 2 ? 12 : 6}
-						width={"100%"}
+							// width={"100%"}
 						position={"relative"}
 						minHeight={"20rem"}
 						height={`${scrollAmount === 2 ? 80 : 100}%`}

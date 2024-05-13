@@ -7,22 +7,21 @@ const GridItem = styled(Grid)({
 	justifyContent: "center",
 	padding: "2rem",
 });
-const CompanyText = styled(Typography)(({ theme }) => {
-	return {
-		textAlign: "center",
-		variant: "h2",
-		color: theme.palette.dark2.main,
-		fontWeight: "medium",
-		lineHeight: "4rem",
-		fontSize: "5rem",
-		letterSpacing: "-1px",
-		textWrap: "wrap",
-	};
-});
-const Holder = styled(Box)({
+const CompanyText = styled(Typography)(({ theme }) => ({
+	textAlign: "center",
+	variant: "h2",
+	color: theme.palette.dark2.main,
+	fontWeight: "medium",
+	lineHeight: "4rem",
+	fontSize: "5rem",
+	letterSpacing: "-1px",
+	textWrap: "wrap",
+}));
+const Holder = styled(Box)(({ theme }) => ({
 	height: "100%",
-	// backgroundColor: "red",
-});
+	[theme.breakpoints.down("md")]: {},
+}));
+
 const GridContainer = styled(Box)({
 	direction: "row",
 	column: 2,

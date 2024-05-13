@@ -6,7 +6,7 @@ const ContainerFull = styled(Container)({
 	height: "100dvh",
 	overflow: "hidden",
 });
-const LeftBox = styled(Box)({
+const LeftBox = styled(Box)(({ theme }) => ({
 	margin: "0",
 	paddingLeft: "4rem",
 	paddingTop: "3rem",
@@ -21,19 +21,30 @@ const LeftBox = styled(Box)({
 	left: "0",
 	top: "0",
 	height: "calc(100vh - 3rem)",
-});
+	[theme.breakpoints.down("md")]: {
+		width: "calc(100% )",
+		height: "calc(50% )",
+		borderTopRightRadius: "0",
+		// borderBottomRightRadius: "15rem",
+	},
+}));
 
-const RightBox = styled(Box)({
+const RightBox = styled(Box)(({ theme }) => ({
 	position: "absolute",
-	
 	backgroundSize: "cover",
-	width: "45%",
+	width: "50%",
 	backgroundImage: `url(.//assets/Images/GettingStarted/1.png)`,
 	backgroundRepeat: "no-repeat",
 	right: "0",
-	top: "0",
+	// top: "0",
 	height: "100%",
-});
+	[theme.breakpoints.down("md")]: {
+		backgroundPosition: "center",
+		bottom: "0",
+		width: "100%",
+		height: "58%",
+	},
+}));
 
 const DateText = styled(Typography)({
 	variant: "body1",
