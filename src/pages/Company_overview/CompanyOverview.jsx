@@ -1,6 +1,11 @@
 import { useRef } from "react";
-import { Box, Grid, Grow, Paper } from "@mui/material";
-import { CompanyText, GridItem, Holder } from "./CompanyOverviewStyles";
+import { Box, Grid, Grow } from "@mui/material";
+import {
+	CompanyText,
+	Holder,
+	LeftGridItem,
+	RightGridItem,
+} from "./CompanyOverviewStyles";
 import StoryBehind from "./StoryBehind/StoryBehind";
 import StartingText from "./StartingText/StartingText";
 import Gallery from "./Gallery/Gallery";
@@ -22,20 +27,19 @@ function CompanyOverView() {
 			>
 				<Grid
 					direction={"row"}
+					position={"relative"}
 					container
 					column={2}
 					alignContent={"center"}
-					justifyContent={"space-between"}
 					height={"100%"}
-					bgcolor={'red'}
 				>
-					<GridItem
+					<LeftGridItem
 						item
-						xs={scrollAmount === 2 ? 12 : 6}
+						xs={12}
+						md={4}
 						overflow={"hidden"}
 						alignItems="center"
 						justifyContent={"center"}
-						bgcolor={'yellow'}
 					>
 						<Box
 							color="dark1"
@@ -43,47 +47,26 @@ function CompanyOverView() {
 						>
 							<CompanyText>Company Overview</CompanyText>
 						</Box>
-					</GridItem>
-					<GridItem
+					</LeftGridItem>
+					<RightGridItem
+						xs={12}
+						md={8}
 						item
-							// width={"100%"}
-						position={"relative"}
-						minHeight={"20rem"}
-						height={`${scrollAmount === 2 ? 80 : 100}%`}
-						// bgcolor={"red"}
-						flexGrow={2}
+						// position={"relative"}
+						// minHeight={"20rem"}
+						// height={`${scrollAmount === 2 ? 80 : 100}%`}
+						flexGrow={1}
 					>
-						<Box
-							position={"absolute"}
-							height={"100%"}
-							top={0}
-							left={0}
-						>
-							<StartingText scrollAmount={scrollAmount} />
+						<Box z>
+							<StartingText />
 						</Box>
 						<Box
-							marginRight={"1rem"}
-							position={"absolute"}
-							top={0}
-							left={0}
-							height={"100%"}
-							// bgcolor={"red"}
-							boxSizing={"border-box"}
-							paddingBottom={"1rem"}
+							paddingBottom={"4rem"}
+							overflow={"auto"}
 						>
-							<StoryBehind scrollAmount={scrollAmount} />
+							<StoryBehind />
 						</Box>
-						<Box
-							position={"absolute"}
-							top={0}
-							left={0}
-							// right={0}
-							width={"100%"}
-							height={"100%"}
-						>
-							<Gallery scrollAmount={scrollAmount} />
-						</Box>
-					</GridItem>
+					</RightGridItem>
 				</Grid>
 			</Grow>
 		</Holder>

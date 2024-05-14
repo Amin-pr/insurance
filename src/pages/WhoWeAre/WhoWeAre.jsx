@@ -13,9 +13,9 @@ function WhoWeAre() {
 			>
 				<Grid
 					item
-					width={"100%"}
-					height={"100%"}
-					xs={6}
+
+					xs={12}
+					md={6}
 				>
 					<LeftBox height={"100%"}>
 						<Slide
@@ -62,9 +62,9 @@ function WhoWeAre() {
 				</Grid>
 				<Grid
 					item
-					width={"100%"}
-					height={"100%"}
-					xs={6}
+
+					xs={12}
+					md={6}
 				>
 					<RightBox>
 						<Slide

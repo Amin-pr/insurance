@@ -18,8 +18,6 @@ const pages = [
 ];
 
 function Agenda() {
-
-
 	return (
 		<div style={{ overflow: "hidden" }}>
 			<Slide
@@ -50,8 +48,8 @@ function Agenda() {
 											</Typography>
 											<Link to={`/${page.name}`}>
 												<Fab
-													size="small"
-													color="light"
+													size="medium"
+													color="dark1"
 												>
 													<ArrowForwardIosRounded
 														color="white"

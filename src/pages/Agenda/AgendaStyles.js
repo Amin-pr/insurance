@@ -14,7 +14,7 @@ const AgendaImage = styled(Box)({
 	height: "calc(100vh)",
 	// aspectRatio: "16/8",
 });
-const RightBox = styled(Box)({
+const RightBox = styled(Box)(({ theme }) => ({
 	width: "58%",
 	height: "100vh",
 	position: "absolute",
@@ -27,7 +27,10 @@ const RightBox = styled(Box)({
 		"linear-gradient(0deg, rgba(24,87,91,0.8) 0%, rgba(24,87,91,0.8) 100%)",
 	backdropFilter: "blur(5px)",
 	alignItems: "center",
-});
+	[theme.breakpoints.down("md")]: {
+		width: "100%",
+	},
+}));
 
 const AgendaCard = styled(Card)({
 	display: "flex",
@@ -38,22 +41,27 @@ const AgendaCard = styled(Card)({
 	borderRadius: "1rem",
 	border: "2px solid #DCECED",
 	padding: "2rem",
-	minWidth: "200px",
+	minWidth: "290px",
 	flexWrap: "nowrap",
 	background: "rgba(255,255,255,0.1)",
+	width: "100%",
 });
-const GridItem = styled(Grid2)({
+const GridItem = styled(Grid2)(({ theme }) => ({
 	display: "flex",
 	alignItems: "center",
 	justifyContent: "center",
-});
+	maxwidth: "45%",
+	[theme.breakpoints.down("md")]: {
+		width: "90%",
+	},
+}));
 const GridContainer = styled(Grid2)({
 	display: "flex",
 	alignItems: "center",
 	justifyContent: "center",
 	paddingTop: "2rem",
 	flexWrap: "wrap",
-	columnGap: "2rem",
+	columnGap: "3rem",
 });
 export {
 	ContainerFull,

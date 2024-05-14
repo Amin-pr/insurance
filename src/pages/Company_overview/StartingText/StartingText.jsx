@@ -4,15 +4,16 @@ import { TextHolder } from "./StartingTextStyles";
 function StartingText({ scrollAmount }) {
 	return (
 		<Slide
-			in={scrollAmount === 0}
+			in
 			direction="down"
 		>
-			<TextHolder sx={{}}>
+			<TextHolder>
 				<Typography
 					variant="body1"
-					fontSize={"2rem"}
+					fontSize={"1.5rem"}
 					textAlign={"left"}
-					margin={"3rem 3rem 0 3rem"}
+					color={'whitesmoke'}
+					// margin={"3rem 3rem 0 3rem"}
 				>
 					We understand the importance of ensuring the well-being of employees
 					and their families by offering affordable and accessible healthcare

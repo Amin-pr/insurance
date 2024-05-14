@@ -7,25 +7,31 @@ const ContainerFull = styled(Container)({
 	overflow: "hidden",
 });
 const LeftBox = styled(Box)(({ theme }) => ({
+	boxSizing: "border-box",
 	margin: "0",
 	paddingLeft: "4rem",
 	paddingTop: "3rem",
 	display: "flex",
 	flexDirection: "column",
-	gap: "5rem",
+	gap: "3rem",
 	position: "absolute",
 	background: "#18575b",
 	borderTopRightRadius: "10rem",
 	width: "58%",
+
 	zIndex: "1",
 	left: "0",
 	top: "0",
-	height: "calc(100vh - 3rem)",
+	height: "100vh ",
 	[theme.breakpoints.down("md")]: {
+		paddingLeft: "4rem",
+		paddingTop: "3rem",
 		width: "calc(100% )",
 		height: "calc(50% )",
 		borderTopRightRadius: "0",
-		// borderBottomRightRadius: "15rem",
+		borderBottomRightRadius: "5rem",
+		// paddingLeft: "0rem",
+		// paddingTop: "0rem",
 	},
 }));
 
@@ -54,7 +60,7 @@ const DateText = styled(Typography)({
 	textShadow: "1px 1px 0 black",
 	paddingLeft: "1rem",
 });
-const BannerText = styled(Typography)({
+const BannerText = styled(Typography)(({ theme }) => ({
 	color: "#fff",
 	fontWeight: "600",
 	component: "h1",
@@ -63,7 +69,13 @@ const BannerText = styled(Typography)({
 	fontSize: "5rem",
 	letterSpacing: "-0.3rem",
 	lineHeight: "5rem",
-});
+	[theme.breakpoints.down("md")]: {
+		maxWidth: "70%",
+		fontSize: "4rem",
+		letterSpacing: "-0.3rem",
+		lineHeight: "4rem",
+	},
+}));
 const LowerRightBox = styled(Box)({
 	borderTopLeftRadius: "3rem",
 	backgroundColor: "#8DACAE",

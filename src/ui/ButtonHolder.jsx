@@ -11,9 +11,9 @@ function ButtonHolder({
 	text,
 	buttonSize,
 	buttonBorderColor = "#FFFFFF",
-	to
+	to,
 }) {
-	const ButtonHolder = styled(Box)({
+	const ButtonHolder = styled(Box)(({ theme }) => ({
 		width: "10%",
 		height: "100vh",
 		display: "flex",
@@ -21,7 +21,10 @@ function ButtonHolder({
 		justifyContent: "center",
 		flexDirection: "column",
 		margin: "0 1rem",
-	});
+		[theme.breakpoints.down("md")]: {
+			display: "none",
+		},
+	}));
 	const NavigateButton = styled(Fab)({
 		backgroundColor: `${buttonBackground}`,
 		border: "2px solid white",

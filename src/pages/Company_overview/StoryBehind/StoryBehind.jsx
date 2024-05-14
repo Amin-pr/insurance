@@ -7,7 +7,7 @@ import { Link } from "react-router-dom";
 function StoryBehind({ scrollAmount }) {
 	return (
 		<Slide
-			in={scrollAmount === 1}
+			in
 			direction="up"
 		>
 			<Holder
@@ -16,7 +16,7 @@ function StoryBehind({ scrollAmount }) {
 				display={"flex"}
 				justifyContent={"space-between"}
 				boxSizing={"border-box"}
-				rowGap={"2rem"}
+				// rowGap={"2rem"}
 			>
 				<Typography
 					variant="h6"

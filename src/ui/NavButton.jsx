@@ -9,13 +9,13 @@ function ButtonNav({
 	prev,
 	add,
 	background = "#082F32",
-	arrowColor = "white",
-	arrowHoverColor = "white",
+	arrowColor = "whitesmoke",
+	arrowHoverColor = "whitesmoke",
 	sx,
 	size = "medium",
 	handleClick,
 }) {
-	let [color, setColor] = useState({ arrowHoverColor });
+	let [color, setColor] = useState("whitesmoke");
 
 	const onClick = () => {
 		handleClick();
@@ -31,9 +31,9 @@ function ButtonNav({
 		<StyledFab
 			size={size}
 			sx={sx}
-			color={background}
-			onMouseEnter={() => setColor(arrowHoverColor)}
-			onMouseLeave={() => setColor(arrowColor)}
+			// color={'dark1'}
+			// onMouseEnter={() => setColor(arrowHoverColor)}
+			// onMouseLeave={() => setColor(arrowColor)}
 			onClick={onClick}
 		>
 			{next && <ArrowForwardIos htmlColor={`${color}`} />}
