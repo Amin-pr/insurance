@@ -67,7 +67,7 @@ function AppLayout() {
 				</ContentsHolder>
 				<ButtonHolder
 					next
-					text={ pages1.at(pageIndex + 1).name}
+					text={pages1.at(pageIndex + 1).name}
 					buttonBorderColor="#FFFFFF"
 					to={`/${pages1.at(pageIndex + 1).name}`}
 				></ButtonHolder>
