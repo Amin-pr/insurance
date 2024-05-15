@@ -51,7 +51,9 @@ function OurUniqeValue() {
 	// selects the chosen obj
 	const selected =
 		textes[
-			Object?.keys(textes)?.find((item) => textes[item]?.alignment === alignment)
+			Object?.keys(textes)?.find(
+				(item) => textes[item]?.alignment === alignment
+			)
 		];
 	return (
 		<Grow
@@ -81,10 +83,10 @@ function OurUniqeValue() {
 							<CardMedia
 								sx={{
 									height: "100%",
-									objectFit: "cover",
+									backgroundSize: "center",
 								}}
 								onClick={(e) => e.play}
-								image=".\\assets\Images\CompanyOverview\3.png"
+								src=".\\assets\Images\CompanyOverview\3.png"
 								component={"img"}
 								// autoPlay
 							></CardMedia>

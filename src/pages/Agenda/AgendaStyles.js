@@ -12,7 +12,8 @@ const AgendaImage = styled(Box)({
 	backgroundImage: "public/assets/images/Agenda-bg.jpg",
 	maxWidth: "calc(100vw )",
 	height: "calc(100vh)",
-	// aspectRatio: "16/8",
+	aspectRatio: "16/9",
+	width:"100%"
 });
 const RightBox = styled(Box)(({ theme }) => ({
 	width: "58%",

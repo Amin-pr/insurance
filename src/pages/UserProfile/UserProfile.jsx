@@ -2,7 +2,6 @@ import { Box, Typography } from "@mui/material";
 import { QueryClient, useQueryClient } from "@tanstack/react-query";
 
 function UserProfile() {
-    
 	const queryClient = useQueryClient();
 	const userData = queryClient.getQueryData(["user"]);
 	console.log(userData);
@@ -12,7 +11,7 @@ function UserProfile() {
 			alignItems={"center"}
 			justifyContent={"center"}
 		>
-			<Typography>wellcome {userData?.user.email}</Typography>
+			<Typography>wellcome {userData?.user?.email}</Typography>
 		</Box>
 	);
 }

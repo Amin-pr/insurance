@@ -7,7 +7,7 @@ const BackgroundImage = styled(Box)({
 	height: "100svh",
 	margin: "0",
 	borderRadius: "0 !important",
-	backgroundImage: "url('.//assets/images/AppLayout/AppLayoutImage.png')",
+	backgroundImage: "url('public/assets/images/AppLayout/AppLayoutImage.png')",
 	backgroundSize: "cover",
 	backgroundPosition: "center",
 });
