@@ -18,7 +18,7 @@ const LeftBox = styled(Box)(({ theme }) => ({
 	background: "#18575b",
 	borderTopRightRadius: "10rem",
 	width: "58%",
-
+	overflow: "hidden",
 	zIndex: "1",
 	left: "0",
 	top: "0",
@@ -42,6 +42,7 @@ const RightBox = styled(Box)(({ theme }) => ({
 	backgroundImage: `url(.//assets/Images/GettingStarted/1.png)`,
 	backgroundRepeat: "no-repeat",
 	right: "0",
+	overflow: "hidden",
 	// top: "0",
 	height: "100%",
 	[theme.breakpoints.down("md")]: {
