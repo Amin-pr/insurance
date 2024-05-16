@@ -3,11 +3,14 @@ import {
 	Card,
 	CardMedia,
 	Fade,
+	Grid,
 	Grow,
 	Slide,
 	Typography,
 } from "@mui/material";
 import {
+	GridContainer,
+	HeaderText,
 	LeftBox,
 	RightBox,
 	RightBoxContent,
@@ -15,6 +18,8 @@ import {
 } from "./OurUniqueValueStyles";
 import ToggleHeaderButton from "../../ui/ToggleHeaderButton";
 import { useState } from "react";
+import PerfectScrollbar from "react-perfect-scrollbar";
+import "react-perfect-scrollbar/dist/css/styles.css";
 
 function OurUniqeValue() {
 	const [alignment, setAlignment] = useState("left");
@@ -60,40 +65,46 @@ function OurUniqeValue() {
 			in
 			timeout={500}
 		>
-			<Box
-				display={"flex"}
-				sx={{ width: "100%", height: "100%" }}
+			<GridContainer
+				container
+				sx={
+					{
+						// justifyContent: "space-around",
+						// alignItems: "center",
+					}
+				}
 			>
-				<Slide
+				{/* <Slide
 					in
 					timeout={500}
+				> */}
+				<LeftBox
+					item
+					xs={12}
+					md={6}
 				>
-					<LeftBox>
-						<Typography
-							fontWeight="bold"
-							variant="h2"
-							color={"dark1.main"}
-						>
-							Our
-							<br /> Unique
-							<br />
-							{} Value
-						</Typography>
-						<Card sx={{ height: "100%" }}>
-							<CardMedia
-								sx={{
-									height: "100%",
-									backgroundSize: "center",
-								}}
-								onClick={(e) => e.play}
-								src=".\\assets\Images\CompanyOverview\3.png"
-								component={"img"}
-								// autoPlay
-							></CardMedia>
-						</Card>
-					</LeftBox>
-				</Slide>
-				<RightBox>
+					<HeaderText color={"dark1.main"}>Our Unique Value</HeaderText>
+					<Card sx={{ height: "100%" }}>
+						<CardMedia
+							sx={{
+								// width: "100%",
+								height: "100%",
+								backgroundSize: "cover",
+								backgroundPosition: "left",
+							}}
+							// onClick={(e) => e.play}
+							src=".\\assets\Images\CompanyOverview\3.png"
+							component={"img"}
+							// autoPlay
+						></CardMedia>
+					</Card>
+				</LeftBox>
+				{/* </Slide> */}
+				<RightBox
+					item
+					xs={12}
+					md={6}
+				>
 					<RightBoxContent>
 						<ToggleHeaderButton
 							alignment={alignment}
@@ -104,32 +115,49 @@ function OurUniqeValue() {
 								timeout={500}
 								in={fadeIn === alignment}
 							>
-								<Box>
-									<Typography
-										variant="h4"
-										fontWeight={"bold"}
-										marginTop={"4rem"}
-										marginBottom={"2rem"}
-										textAlign="left"
-										color="dark1.main"
-										letterSpacing={"-2px"}
-									>
-										{selected?.title}
-									</Typography>
-
-									<Typography
-										variant="body1"
-										color="dark1.main"
-										fontWeight={"medium"}
-									>
-										{selected?.text}
-									</Typography>
+								<Box
+									height={"100%"}
+									overflow={"auto"}
+									// sx={{scrollbar}}
+								>
+									<PerfectScrollbar>
+										<Box>
+											<Typography
+												variant="h4"
+												fontWeight={"bold"}
+												// marginTop={"4rem"}
+												marginBottom={"2rem"}
+												textAlign="left"
+												color="dark1.main"
+												letterSpacing={"-2px"}
+												padding={"1rem 0 0 0"}
+											>
+												{selected?.title}
+											</Typography>
+										</Box>
+										<Box
+											sx={{
+												boxSizing: "border-box",
+												height: "100%",
+												// overflow: "auto",
+											}}
+										>
+											<Typography
+												variant="body1"
+												color="dark1.main"
+												fontWeight={"medium"}
+												padding={"0 2rem"}
+											>
+												{selected?.text}
+											</Typography>
+										</Box>
+									</PerfectScrollbar>
 								</Box>
 							</Fade>
 						</TextHolder>
 					</RightBoxContent>
 				</RightBox>
-			</Box>
+			</GridContainer>
 		</Grow>
 	);
 }
