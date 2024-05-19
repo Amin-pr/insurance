@@ -1,7 +1,16 @@
 import styled from "@emotion/styled";
-import { Box, CardMedia, Typography } from "@mui/material";
+import { Box, CardMedia, Grid, Typography } from "@mui/material";
 
-const LeftBox = styled(Box)(() => {
+const GridContainer = styled(Grid)(() => {
+	return {
+		display: "flex",
+		flexDirection: "row",
+		width: "100%",
+		height: "100%",
+	};
+});
+
+const LeftBox = styled(Grid)(({ theme }) => {
 	return {
 		width: "60%",
 		height: "100%",
@@ -11,9 +20,12 @@ const LeftBox = styled(Box)(() => {
 		alignItems: "center",
 		justifyContent: "center",
 		flexGrow: "0.5",
+		[theme.breakpoints.down("md")]: {
+			height: "auto",
+		},
 	};
 });
-const RightBox = styled(Box)(() => {
+const RightBox = styled(Grid)(() => {
 	return {
 		width: "100%",
 		height: "100%",
@@ -103,4 +115,5 @@ export {
 	RightBoxImageFilter,
 	ChildrenHolder,
 	ChildeBox,
+	GridContainer,
 };

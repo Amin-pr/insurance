@@ -1,5 +1,6 @@
-import { Box, Grow, Slide } from "@mui/material";
+import { Grow, Slide } from "@mui/material";
 import {
+	GridContainer,
 	LeftBox,
 	LeftBoxTitle,
 	RightBox,
@@ -21,13 +22,12 @@ function Products() {
 	console.log(selectedCategory);
 	return (
 		<Grow in>
-			<Box
-				display={"flex"}
-				flexDirection={"row"}
-				width={"100%"}
-				height={"100%"}
-			>
-				<LeftBox>
+			<GridContainer container>
+				<LeftBox
+					item
+					xs={12}
+					md={6}
+				>
 					<LeftBoxTitle
 						variant="h2"
 						fontWeight={"medium"}
@@ -57,7 +57,11 @@ function Products() {
 						Key Benifits Of Services
 					</TogglingButton>
 				</LeftBox>
-				<RightBox>
+				<RightBox
+					item
+					xs={12}
+					md={6}
+				>
 					<Slide
 						direction="left"
 						timeout={500}
@@ -74,7 +78,7 @@ function Products() {
 					<CorePoducts showing={selectedCategory} />
 					<ServicesBenifits showing={selectedCategory} />
 				</RightBox>
-			</Box>
+			</GridContainer>
 		</Grow>
 	);
 }

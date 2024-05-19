@@ -1,5 +1,5 @@
 import { Box, Grid, Slide, Typography, Zoom } from "@mui/material";
-import { Image, LeftBox, RightBox } from "./WhoWeAreStyles";
+import { ButtonHolder, HeaderText, Image, LeftBox, RightBox } from "./WhoWeAreStyles";
 import ButtonNav from "../../ui/NavButton";
 
 function WhoWeAre() {
@@ -13,7 +13,6 @@ function WhoWeAre() {
 			>
 				<Grid
 					item
-
 					xs={12}
 					md={6}
 				>
@@ -35,18 +34,13 @@ function WhoWeAre() {
 								in
 								direction="right"
 							> */}
-								<Typography
+								<HeaderText
 									variant="h2"
-									fontWeight={"medium"}
-									fontSize={"85px"}
-									lineHeight={"4rem"}
-									marginBottom={"3rem"}
-									color={"teal"}
 								>
 									Who
 									<br />
 									we are
-								</Typography>
+								</HeaderText>
 								<Typography
 									variant="body1"
 									fontSize={"20px"}
@@ -62,7 +56,6 @@ function WhoWeAre() {
 				</Grid>
 				<Grid
 					item
-
 					xs={12}
 					md={6}
 				>
@@ -83,13 +76,13 @@ function WhoWeAre() {
 							width={"100%"}
 							justifyContent={"end"}
 						>
-							<Box
-								display={"flex"}
-								alignItems={"center"}
-								// bgcolor={"blue"}
-								marginTop={"15%"}
-								marginRight={"12%"}
-								padding={"1rem"}
+							<ButtonHolder
+								// display={"flex"}
+								// alignItems={"center"}
+								// // bgcolor={"blue"}
+								// // marginTop={"15%"}
+								// // marginRight={"12%"}
+								// padding={"1rem"}
 							>
 								<Typography
 									marginRight={"1rem"}
@@ -107,7 +100,7 @@ function WhoWeAre() {
 									next
 									arrowHoverColor="#082F32"
 								></ButtonNav>
-							</Box>
+							</ButtonHolder>
 						</Box>
 					</RightBox>
 				</Grid>
