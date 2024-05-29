@@ -22,6 +22,8 @@ const LeftBox = styled(Grid)(({ theme }) => {
 		flexGrow: "0.5",
 		[theme.breakpoints.down("md")]: {
 			height: "auto",
+			width: "100%",
+			padding: "1rem",
 		},
 	};
 });
@@ -38,9 +40,13 @@ const RightBox = styled(Grid)(() => {
 	};
 });
 
-const LeftBoxTitle = styled(Typography)(() => {
+const LeftBoxTitle = styled(Typography)(({ theme }) => {
 	return {
 		padding: "2rem",
+		[theme.breakpoints.down("md")]: {
+			fontSize: "1rem",
+			padding: "0.5rem",
+		},
 	};
 });
 const RightBoxImage = styled(CardMedia)(() => {

@@ -8,7 +8,7 @@ import {
 } from "./CompanyOverviewStyles";
 import StoryBehind from "./StoryBehind/StoryBehind";
 import StartingText from "./StartingText/StartingText";
-import Gallery from "./Gallery/Gallery";
+
 import useScrollFunction from "../../utility/ScrollFunction/ScrollFunction";
 
 function CompanyOverView() {

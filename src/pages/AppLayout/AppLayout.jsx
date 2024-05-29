@@ -6,9 +6,20 @@ import useHover from "../../utility/HoverFunction/HoverFunction";
 import { Outlet, useLocation } from "react-router-dom";
 import { useQuery } from "@tanstack/react-query";
 import { GetLoggedUserInfo } from "../../utility/Auth/GetLoggedUserInfo";
+import DeviceType from "../../utility/Device Type/Device Type";
+import NextButton from "../../ui/NextButtoncop";
+import PrevButton from "../../ui/PrevButton";
+import { useState } from "react";
 
 // eslint-disable-next-line react/prop-types
 function AppLayout() {
+	// const [device, setDevice] = useState("desktop");
+
+	// setInterval(() => {
+	// 	setDevice(() => DeviceType());
+	// }, 5000);
+
+	// console.log(device);
 	const { data: userData } = useQuery({
 		queryKey: ["user"],
 		// must return a promise
@@ -57,6 +68,7 @@ function AppLayout() {
 			<NavBar mouseHover={IsHovered} />
 
 			<Container>
+				<PrevButton to={`/${pages1.at(pageIndex - 1).name}`} />
 				<ButtonHolder
 					prev
 					text={pages1.at(pageIndex - 1).name}
@@ -71,6 +83,7 @@ function AppLayout() {
 					buttonBorderColor="#FFFFFF"
 					to={`/${pages1.at(pageIndex + 1).name}`}
 				></ButtonHolder>
+				<NextButton to={`/${pages1.at(pageIndex + 1).name}`} />
 			</Container>
 		</Box>
 	);
