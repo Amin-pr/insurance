@@ -57,7 +57,7 @@ function CompanyOverView() {
 						// height={`${scrollAmount === 2 ? 80 : 100}%`}
 						flexGrow={1}
 					>
-						<Box z>
+						<Box>
 							<StartingText />
 						</Box>
 						<Box
