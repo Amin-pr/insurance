@@ -20,14 +20,15 @@ const LeftBox = styled(Grid)(({ theme }) => {
 		justifyContent: "center",
 		flexGrow: "0.5",
 		[theme.breakpoints.down("md")]: {
-			height: "auto",
+			height: "40dvh",
 			width: "100%",
 			padding: "1rem",
 		},
 	};
 });
-const RightBox = styled(Grid)(() => {
+const RightBox = styled(Grid)(({ theme }) => {
 	return {
+		// backgroundColor: "red",
 		width: "100%",
 		height: "100%",
 		display: "flex",
@@ -36,7 +37,9 @@ const RightBox = styled(Grid)(() => {
 		justifyContent: "center",
 		flexGrow: "1",
 		position: "relative",
-		
+		[theme.breakpoints.down("md")]: {
+			height: "60dvh",
+		},
 	};
 });
 
@@ -99,7 +102,6 @@ const ChildrenHolder = styled(Box)(({ theme }) => {
 		justifyContent: "start",
 		gap: "2rem",
 		paddingTop: "3rem",
-	
 	};
 });
 const ChildeBox = styled(Box)(({ theme }) => {

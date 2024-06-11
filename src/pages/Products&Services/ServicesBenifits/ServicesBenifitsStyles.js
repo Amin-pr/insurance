@@ -28,7 +28,7 @@ const TextBox = styled(Box)(({ theme }) => {
 		width: "100%",
 		backgroundColor: theme.palette.light.main,
 		[theme.breakpoints.down("md")]: {
-			overflow: "auto",
+			// overflow: "auto",
 		},
 	};
 });
