@@ -2,6 +2,7 @@
 import { AppBar, Box, Button, Slide, Toolbar } from "@mui/material";
 import Logo from "./Logo";
 import { AppsRounded } from "@mui/icons-material";
+import { Link } from "react-router-dom";
 
 function NavBar({ mouseHover }) {
 	return (
@@ -28,14 +29,16 @@ function NavBar({ mouseHover }) {
 						}}
 					>
 						<Logo width="125" />
-						<Button
-							sx={{ padding: "5px !important", minWidth: "0 !important" }}
-							size="small"
-							color="white"
-							variant="outlined"
-						>
-							<AppsRounded></AppsRounded>
-						</Button>
+						<Link to={"/home"}>
+							<Button
+								sx={{ padding: "5px !important", minWidth: "0 !important" }}
+								size="small"
+								color="white"
+								variant="outlined"
+							>
+								<AppsRounded></AppsRounded>
+							</Button>
+						</Link>
 						<Button color="white">Disclamer</Button>
 					</Toolbar>
 				</AppBar>
