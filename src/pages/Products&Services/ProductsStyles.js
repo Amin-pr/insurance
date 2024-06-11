@@ -14,7 +14,6 @@ const LeftBox = styled(Grid)(({ theme }) => {
 	return {
 		width: "60%",
 		height: "100%",
-		// backgroundColor: "red",
 		display: "flex",
 		flexDirection: "column",
 		alignItems: "center",
@@ -37,6 +36,7 @@ const RightBox = styled(Grid)(() => {
 		justifyContent: "center",
 		flexGrow: "1",
 		position: "relative",
+		
 	};
 });
 
@@ -99,7 +99,7 @@ const ChildrenHolder = styled(Box)(({ theme }) => {
 		justifyContent: "start",
 		gap: "2rem",
 		paddingTop: "3rem",
-		// scrollbarColor: `${theme.palette.dark1.main}  ${theme.palette.dark2.main}`,
+	
 	};
 });
 const ChildeBox = styled(Box)(({ theme }) => {

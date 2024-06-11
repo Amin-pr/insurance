@@ -17,8 +17,8 @@ import { GetLoggedUserInfo } from "../utility/Auth/GetLoggedUserInfo";
 const SubmitButton = styled(Button)(() => {
 	return {
 		height: "50px",
-		width: "35%",
-		borderBottomRightRadius: "2rem",
+		width: "100%",
+		// borderBottomRightRadius: "2rem",
 		alignSelf: "end",
 		justifySelf: "end",
 		color: "white",
@@ -40,13 +40,12 @@ function LoginForm() {
 		login({ email: inputEmail, password: inputPassword });
 	}
 
-
 	// get logged in user data
 	const { data: userData } = useQuery({
 		queryKey: ["user"],
 		// must return a promise
-		queryFn: () => GetLoggedUserInfo(), 
-		staleTime:60*1000*3
+		queryFn: () => GetLoggedUserInfo(),
+		staleTime: 60 * 1000 * 3,
 	});
 
 	return (
@@ -64,7 +63,7 @@ function LoginForm() {
 				<FormControl>
 					<FormGroup>
 						<TextField
-							sx={{ margin: " 1rem" }}
+							// sx={{ margin: " 1rem" }}
 							variant="filled"
 							size="small"
 							id="name-input"
@@ -75,7 +74,7 @@ function LoginForm() {
 						/>
 
 						<TextField
-							sx={{ margin: " 1rem" }}
+							sx={{ marginBottom: " 2rem" }}
 							margin="normal"
 							variant="filled"
 							size="small"
@@ -123,7 +122,6 @@ function SignupForm() {
 				<FormControl>
 					<FormGroup>
 						<TextField
-							sx={{ margin: " 1rem" }}
 							margin="normal"
 							variant="filled"
 							size="small"
@@ -132,7 +130,7 @@ function SignupForm() {
 							onChange={(e) => setInputEmail(e.target.value)}
 						/>
 						<TextField
-							sx={{ margin: " 1rem" }}
+							sx={{ marginBottom: " 2rem" }}
 							margin="normal"
 							variant="filled"
 							size="small"

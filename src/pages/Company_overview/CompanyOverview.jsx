@@ -8,14 +8,13 @@ import {
 } from "./CompanyOverviewStyles";
 import StoryBehind from "./StoryBehind/StoryBehind";
 import StartingText from "./StartingText/StartingText";
-
 import useScrollFunction from "../../utility/ScrollFunction/ScrollFunction";
+import PerfectScrollbar from "react-perfect-scrollbar";
+import "react-perfect-scrollbar/dist/css/styles.css";
 
 function CompanyOverView() {
 	const scrollableRef = useRef(null);
-	const { scrollAmount, handleScroll } = useScrollFunction({
-		maxScrollAmount: 2,
-	});
+
 	return (
 		<Holder
 			ref={scrollableRef}
@@ -52,9 +51,6 @@ function CompanyOverView() {
 						xs={12}
 						md={8}
 						item
-						// position={"relative"}
-						// minHeight={"20rem"}
-						// height={`${scrollAmount === 2 ? 80 : 100}%`}
 						flexGrow={1}
 					>
 						<Box>
@@ -64,7 +60,9 @@ function CompanyOverView() {
 							paddingBottom={"4rem"}
 							overflow={"auto"}
 						>
-							<StoryBehind />
+							<PerfectScrollbar ov>
+								<StoryBehind />
+							</PerfectScrollbar>
 						</Box>
 					</RightGridItem>
 				</Grid>

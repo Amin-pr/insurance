@@ -10,8 +10,6 @@ const LeftBox = styled(Box)(() => {
 	return {
 		width: "100%",
 		height: "calc(100% - 5rem)",
-		// marginTop: "2rem",
-		// backgroundColor: "red",
 		alignItems: "center",
 		justifyContent: "center",
 		borderRadius: "3rem",
@@ -21,11 +19,9 @@ const LeftBox = styled(Box)(() => {
 const ButtonHolder = styled(ToggleButtonGroup)(({ theme }) => {
 	return {
 		width: "100%",
-
 		borderRadius: "10px",
 		padding: "5px",
 		color: theme.palette.dark1.main,
-		// margin: "0rem 0rem 2rem 2rem",
 	};
 });
 
@@ -38,10 +34,16 @@ const TypeHolder = styled(Box)(() => {
 });
 
 const RightBox = styled(Box)(({ theme }) => {
-	return { width: "100%", height: "100%" };
+	return {
+		width: "100%",
+		height: "100%",
+		[theme.breakpoints.down("md")]: {
+			display: "none",
+		},
+	};
 });
 
-const RightBoxImage = styled(CardMedia)(() => {
+const RightBoxImage = styled(CardMedia)(({ theme }) => {
 	return {
 		width: "100%",
 		height: "90%",
@@ -50,6 +52,8 @@ const RightBoxImage = styled(CardMedia)(() => {
 		position: "absolute",
 		bottom: "0",
 		left: "0",
+
+		[theme.breakpoints.down("md")]: {},
 	};
 });
 
@@ -68,6 +72,7 @@ const InputHolder = styled(Box)(() => {
 		alignItems: "start",
 		justifyContent: "center",
 		rowGap: "3rem",
+		padding: "2rem",
 	};
 });
 const Text = styled(Typography)(({ theme }) => {

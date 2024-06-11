@@ -10,7 +10,6 @@ const ChildrenHolder = styled(Box)(({ theme }) => {
 		position: "absolute",
 		top: "0",
 		left: "0",
-		// overflow: "auto",
 		backgroundColor: theme.palette.dark1.main,
 		display: "flex",
 		flexDirection: "column",
@@ -20,15 +19,17 @@ const ChildrenHolder = styled(Box)(({ theme }) => {
 });
 const HeadImage = styled(Box)(() => {
 	return {
-		width: "100%",
+		// width: "100%",
 	};
 });
 const TextBox = styled(Box)(({ theme }) => {
 	return {
-		height: "100%",
+		height: "calc(100% - 5rem)",
 		width: "100%",
-		overflow: "hidden",
 		backgroundColor: theme.palette.light.main,
+		[theme.breakpoints.down("md")]: {
+			overflow: "auto",
+		},
 	};
 });
 
@@ -37,13 +38,19 @@ const Benifitsnumbers = styled(Box)(() => {
 		display: "flex",
 		flexDirection: "row",
 		alignItems: "center",
-		justifyContent: "flex-end",
+		justifyContent: "center",
 		boxSizing: "border-box",
 		padding: "1rem",
+		width: "100%",
 	};
 });
 const BenifitsToggleNumbers = styled(ToggleButton)(({ theme }) => {
 	return {
+		"&.Mui-selected": {
+			backgroundColor: theme.palette.dark1.main,
+			color: "white",
+		},
+		backgroundColor: theme.palette.dark1,
 		marginRight: "1rem",
 		aspectRatio: "3/1",
 		borderRadius: "2rem",
@@ -53,7 +60,6 @@ const BenifitsToggleNumbers = styled(ToggleButton)(({ theme }) => {
 const Benifit = styled(Box)(() => {
 	return {
 		boxsixteen: "border-box",
-		// overflow: "auto",
 		scrollbarWidth: "0",
 		width: "100%",
 		height: "calc(100% - 3rem)",

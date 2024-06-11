@@ -7,6 +7,7 @@ function NextButton({ to }) {
 	const NextButton = styled(Fab)(({ theme }) => {
 		return {
 			backgroundColor: theme.palette.dark1.main,
+			color: "white",
 			position: "absolute",
 			bottom: "1%",
 			right: "1%",

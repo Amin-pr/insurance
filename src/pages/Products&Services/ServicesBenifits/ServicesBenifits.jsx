@@ -12,8 +12,8 @@ import { useState } from "react";
 import PerfectScrollbar from "react-perfect-scrollbar";
 import "react-perfect-scrollbar/dist/css/styles.css";
 
-// eslint-disable-next-line react/prop-types
 
+// eslint-disable-next-line react/prop-types
 function ServicesBenifits({ showing = 1 }) {
 	const [slideNumber, setSlideNumber] = useState(1);
 
@@ -61,6 +61,7 @@ function ServicesBenifits({ showing = 1 }) {
 				<TextBox>
 					<Benifitsnumbers>
 						<BenifitsToggleNumbers
+							color="dark1"
 							value={1}
 							onClick={(e) => slideHandler(e)}
 							selected={slideNumber == 1}
@@ -68,6 +69,7 @@ function ServicesBenifits({ showing = 1 }) {
 							1
 						</BenifitsToggleNumbers>
 						<BenifitsToggleNumbers
+							color="dark1"
 							value={2}
 							onClick={(e) => slideHandler(e)}
 							selected={slideNumber == 2}
@@ -75,6 +77,7 @@ function ServicesBenifits({ showing = 1 }) {
 							2
 						</BenifitsToggleNumbers>
 						<BenifitsToggleNumbers
+							color="dark1"
 							value={3}
 							onClick={(e) => slideHandler(e)}
 							selected={slideNumber == 3}
@@ -103,12 +106,13 @@ function ServicesBenifits({ showing = 1 }) {
 														rowGap: "2rem",
 														columnGap: "2rem",
 														padding: "2rem",
+														width: "100%",
 													}}
 												>
 													<Box
 														component={"img"}
 														src={benifit.iconSrc}
-													/>
+													></Box>
 													<Typography variant="h5">{benifit.name}</Typography>
 												</Box>
 

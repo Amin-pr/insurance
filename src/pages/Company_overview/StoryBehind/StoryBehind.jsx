@@ -2,6 +2,8 @@
 import { Box, Button, Slide, Typography } from "@mui/material";
 import { Holder } from "./StoryBehindStyles";
 import { Link } from "react-router-dom";
+import PerfectScrollbar from "react-perfect-scrollbar";
+import "react-perfect-scrollbar/dist/css/styles.css";
 
 // eslint-disable-next-line react/prop-types
 function StoryBehind({ scrollAmount }) {

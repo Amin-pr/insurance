@@ -1,4 +1,4 @@
-import { Box, Paper, Slide, ToggleButton } from "@mui/material";
+import { Box, Slide, ToggleButton } from "@mui/material";
 import {
 	ButtonHolder,
 	InputHolder,
@@ -14,10 +14,8 @@ import { useState } from "react";
 import { LoginForm, SignupForm } from "../../ui/Login&Signup";
 import PerfectScrollbar from "react-perfect-scrollbar";
 
-
-
 function LoginPage() {
-	const [error, setError] = useState(false);
+	// const [error, setError] = useState(false);
 
 	const [formType, setFormType] = useState("signUp");
 
@@ -63,16 +61,11 @@ function LoginPage() {
 						</ButtonHolder>
 					</TypeHolder>
 					<PerfectScrollbar>
-						<Paper
-							sx={{
-								margin: "0 4rem",
-								borderRadius: "2rem",
-							}}
-						>
+						<Box>
 							<InputHolder>
 								{formType === "signUp" ? <SignupForm /> : <LoginForm />}
 							</InputHolder>
-						</Paper>
+						</Box>
 					</PerfectScrollbar>
 				</LeftBox>
 
