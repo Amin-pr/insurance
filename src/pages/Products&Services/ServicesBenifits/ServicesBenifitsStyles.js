@@ -27,8 +27,11 @@ const TextBox = styled(Box)(({ theme }) => {
 		height: "calc(100% - 5rem)",
 		width: "100%",
 		backgroundColor: theme.palette.light.main,
+		// backgroundColor: "red",
+
 		[theme.breakpoints.down("md")]: {
 			// overflow: "auto",
+			paddingBottom: "2rem",
 		},
 	};
 });
