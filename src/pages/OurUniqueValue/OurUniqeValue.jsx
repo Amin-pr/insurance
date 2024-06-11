@@ -1,13 +1,4 @@
-import {
-	Box,
-	Card,
-	CardMedia,
-	Fade,
-	Grid,
-	Grow,
-	Slide,
-	Typography,
-} from "@mui/material";
+import { Box, Card, CardMedia, Fade, Grow, Typography } from "@mui/material";
 import {
 	GridContainer,
 	HeaderText,
@@ -118,7 +109,6 @@ function OurUniqeValue() {
 								<Box
 									height={"100%"}
 									overflow={"auto"}
-									// sx={{scrollbar}}
 								>
 									<PerfectScrollbar>
 										<Box>
@@ -126,11 +116,11 @@ function OurUniqeValue() {
 												variant="h4"
 												fontWeight={"bold"}
 												// marginTop={"4rem"}
-												marginBottom={"2rem"}
+												// marginBottom={"2rem"}
 												textAlign="left"
 												color="dark1.main"
 												letterSpacing={"-2px"}
-												padding={"1rem 0 0 0"}
+												padding={"1rem 0 2rem 0"}
 											>
 												{selected?.title}
 											</Typography>

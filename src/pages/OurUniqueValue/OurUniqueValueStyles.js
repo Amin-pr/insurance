@@ -25,24 +25,29 @@ const LeftBox = styled(Grid)(({ theme }) => {
 		justifyContent: "space-around",
 		padding: "2rem",
 		// backgroundColor: "red",
-		textWrap: "",
+		height: "100%",
 		[theme.breakpoints.down("md")]: {
-			height: "35%",
+			height: "35vh",
 			flexDirection: "row",
 			padding: "0",
 		},
 	};
 });
-const RightBox = styled(Grid)(() => {
+const RightBox = styled(Grid)(({ theme }) => {
 	return {
 		boxSizing: "border-box",
 		width: "100%",
-		// height: "calc(100% )",
+		height: "100vh",
 		display: "flex",
 		paddingTop: "4rem",
 		alignItems: "end",
 		// backgroundColor: "green",
 		// overflow: "auto",
+		[theme.breakpoints.down("md")]: {
+			height: "100vh",
+		paddingTop: "0rem",
+
+		},
 	};
 });
 const RightBoxContent = styled(Box)(({ theme }) => {
@@ -51,9 +56,9 @@ const RightBoxContent = styled(Box)(({ theme }) => {
 		width: "100%",
 		height: "100%",
 		borderRadius: "1rem 1rem 0 0",
-		margin: "auto",
-		marginRight: "0",
-		marginBottom: "0rem",
+		// margin: "auto",
+		// marginRight: "0",
+		// marginBottom: "0rem",
 		backgroundColor: theme.palette.light.main,
 	};
 });
