@@ -29,7 +29,7 @@ function NavBar({ mouseHover }) {
 						}}
 					>
 						<Logo width="125" />
-						<Link to={"/home"}>
+						<Link to={"/"}>
 							<Button
 								sx={{ padding: "5px !important", minWidth: "0 !important" }}
 								size="small"
