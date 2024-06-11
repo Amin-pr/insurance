@@ -12,7 +12,6 @@ import { useState } from "react";
 import PerfectScrollbar from "react-perfect-scrollbar";
 import "react-perfect-scrollbar/dist/css/styles.css";
 
-
 // eslint-disable-next-line react/prop-types
 function ServicesBenifits({ showing = 1 }) {
 	const [slideNumber, setSlideNumber] = useState(1);
@@ -101,7 +100,7 @@ function ServicesBenifits({ showing = 1 }) {
 														display: "flex",
 														flexDirection: "row",
 														alignItems: "center",
-														justifyContent: "start",
+														justifyContent: "center",
 														height: "150px",
 														rowGap: "2rem",
 														columnGap: "2rem",
@@ -113,7 +112,7 @@ function ServicesBenifits({ showing = 1 }) {
 														component={"img"}
 														src={benifit.iconSrc}
 													></Box>
-													<Typography variant="h5">{benifit.name}</Typography>
+													<Typography variant="h6">{benifit.name}</Typography>
 												</Box>
 
 												<Typography variant="body1">
